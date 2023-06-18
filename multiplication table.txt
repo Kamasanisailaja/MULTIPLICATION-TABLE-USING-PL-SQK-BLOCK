@@ -1,0 +1,37 @@
+QUERY:
+   multiplication table
+---------------------------------------
+pl/sql block
+--------------------------------------
+declare
+    t int:
+    m int;
+    e int;
+begin
+   t:=&table;
+   m:=&start;
+   e:=&end;
+   while(m<=e)
+   loop
+      dbms_output.put_line(t||' * '||m||' ='||(t*m));
+      m:=m+1;
+   end loop
+end;
+/
+output :
+Enter value for table: 2
+old   6:    t:=&table;
+new   6:    t:=2;
+Enter value for start: 3
+old   7:    m:=&start;
+new   7:    m:=3;
+Enter value for end: 9
+old   8:    e:=&end;
+new   8:    e:=9;
+2 * 3 =6
+2 * 4 =8
+2 * 5 =10
+2 * 6 =12
+2 * 7 =14
+2 * 8 =16
+2 * 9 =18
